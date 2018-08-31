@@ -1,12 +1,11 @@
 ## SpringBoot-Scala
 
-[关于项目搭建以及项目结构](http://blog.csdn.net/qq_20545159/article/details/54173163)
 
 ### required
 * Scala 2.1*
-* JDK 1.8*
-* Gradle 3.*
-* Mysql 5.1*
+* JDK 1.8
+* Gradle 4.*
+* Mysql8.0
 
 ### configuration
 `application.properties`
@@ -35,7 +34,7 @@
 	
 ### build
 
-* git clone https://github.com/silence940109/SpringBoot-Scala.git
+* git clone git@github.com:ColonelChow/SpringBoot-Scala.git
 * gradle bootRun
 
 ### test
@@ -45,6 +44,3 @@
 * curl -d "name=silence&telephone=15345678960&birthday=1994-06-24" http://localhost:8080/save
 * curl -d null http://localhost:8080/delete/505
 * curl  http://localhost:8080/page?pageSize=6\&page=5
-	
-	
-![](https://github.com/silence940109/Java/blob/master/SpringBoot-Scala/image/springboot-scala.jpg)
