@@ -43,4 +43,5 @@
 * curl http://localhost:8080/find/2
 * curl -d "name=silence&telephone=15345678960&birthday=1994-06-24" http://localhost:8080/save
 * curl -d null http://localhost:8080/delete/505
-* curl  http://localhost:8080/page?pageSize=6\&page=5
+* curl http://localhost:8080/page?pageSize=6\&page=5
+* curl -H "Content-Type:application/json" -X POST --data '{"id":"1","name":"张学友","telephone":"15345678960","birthday":"1994-06-24"}' http://127.0.0.1:8080/updateUser

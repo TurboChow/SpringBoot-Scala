@@ -1,20 +1,17 @@
 package com.silence.controller
 
 import org.springframework.stereotype.Controller
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestMethod
+import org.springframework.web.bind.annotation._
 import org.springframework.context.annotation.ComponentScan
 import org.springframework.context.annotation.Configuration
-import org.springframework.web.bind.annotation.ResponseBody
 import org.springframework.beans.factory.annotation.Autowired
 import com.silence.repository.UserRepository
 import org.springframework.web.servlet.ModelAndView
 import com.silence.enties.User
 import java.util.List
-import org.springframework.web.bind.annotation.PathVariable
+
 import javax.validation.Valid
 import org.springframework.validation.BindingResult
-import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.data.domain.Pageable
 import org.springframework.data.domain.PageRequest
 import org.springframework.data.domain.Page
@@ -53,6 +50,12 @@ class UserController @Autowired()(private val userService : UserService){
     @RequestMapping(value = Array("page"), method = Array(RequestMethod.GET))
     def page(@RequestParam("page") page : Int, @RequestParam("pageSize") pageSize : Int) : Page[User] = {
         userService.page(page, pageSize)
+    }
+
+
+    @RequestMapping(value = Array("updateUser"), method = Array(RequestMethod.POST))
+    def updateUser(@RequestBody user: User) : User = {
+        userService.update(user)
     }
     
 }

@@ -15,7 +15,7 @@ jar {
 
 buildscript {
     ext {
-        springBootVersion = '1.4.3.RELEASE'
+        springBootVersion = '1.5.15.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -42,6 +42,8 @@ dependencies {
     //mysql driver
     compile ("mysql:mysql-connector-java:5.1.46")
     testCompile("junit:junit:4.12")
+    compile("org.springframework.boot:spring-boot-devtools")
+
 }
 
 task wrapper(type: Wrapper) {
